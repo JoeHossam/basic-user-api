@@ -7,7 +7,7 @@ const errorHandlerMiddleware = (err: Error, req: Request, res: Response, next: N
     }
 
     // should add logs here with the error stack etc..
-    return res.status(500).json({ message: 'Internal server error' })
+    return res.status(500).json({ message: 'Internal server errosr' })
 }
 
 export default errorHandlerMiddleware
