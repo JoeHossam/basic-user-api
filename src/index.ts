@@ -17,5 +17,7 @@ db.pool.connect((err) => {
     console.log("connected")
 });
 
-
-app.listen(3000);
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`app listenting on port: ${port}`)
+});
