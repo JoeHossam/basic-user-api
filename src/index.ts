@@ -1,9 +1,9 @@
 import 'express-async-errors'
 import express from 'express';
-import * as db from './db';
 import dotenv from 'dotenv'
 import errorHandlerMiddleware from './middlewares/errorHandlerMiddleware';
 import appRotuer from './routes';
+import { setupDB } from './db';
 
 dotenv.config()
 
@@ -18,8 +18,9 @@ app.use(errorHandlerMiddleware)
 //     if (err) throw err;
 //     console.log("connected")
 // });
-
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log(`app listenting on port: ${port}`)
-});
+setupDB().then(() => {
+    app.listen(port, () => {
+        console.log(`app listenting on port: ${port}`)
+    });
+})

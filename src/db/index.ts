@@ -15,4 +15,17 @@ const pool = new Pool({
     port: Number(DB_PORT),
 })
 
-export { pool }
+const setupDB = async () => {
+    await pool.query(`
+    CREATE TABLE IF NOT EXISTS users (
+        "id" CHAR(40) UNIQUE PRIMARY KEY,
+        "email" VARCHAR(255) UNIQUE NOT NULL,
+        "firstName" VARCHAR(255) NOT NULL,
+        "lastName" VARCHAR(255) NOT NULL,
+        "marketingConsent" BOOLEAN DEFAULT FALSE
+    );
+    `);
+}
+
+
+export { pool, setupDB }
