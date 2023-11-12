@@ -27,5 +27,7 @@ const setupDB = async () => {
     `);
 }
 
+const closeDB = () => pool.end();
 
-export { pool, setupDB }
+
+export { pool, setupDB, closeDB }
