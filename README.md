@@ -7,6 +7,7 @@ Simple API to create and get users with access tokens
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Usage](#usage)
+- [Tests](#tests)
 - [Technolgies Used](#technolgies-used)
 
 ## Getting Started
@@ -41,6 +42,13 @@ open your preferred API calling platform
     }
     ```
     - creates a new user and returns `ID` and `access token`
+## Tests
+to run tests run `npm run test`, these are the test cases:
+- test unsupported route (404 NOT FOUND)
+- get user without token (401 UNAUTHENTICATED)
+- create user (201 CREATED)
+- create user with existing email (400 BAD REQUEST)
+- full test create a user, get the user data using its id and token
     
 ## Technolgies Used
 - TypeScript
