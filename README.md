@@ -24,7 +24,7 @@ Simple API to create and get users with access tokens
 
 ## Usage
 open your preferred API calling platform
->Note: the port in the url is set to the port you provide in the .env
+>Note: the port in the url is set to the port you provide in the .env (default 3000)
 ### Endpoints
 - GET `http://localhost:3000/api/v1/user/{id}`
     - requires access token provided in `Authorization` header as `Bearer {token}`
@@ -40,6 +40,7 @@ open your preferred API calling platform
         "marketingConsent": false
     }
     ```
+    - creates a new user and returns `ID` and `access token`
     
 ## Technolgies Used
 - TypeScript
