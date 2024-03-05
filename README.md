@@ -1,4 +1,4 @@
-# saqaya-task-user-api
+# basic-user-api
 Simple API to create and get users with access tokens
 
 ## Table of Contents
