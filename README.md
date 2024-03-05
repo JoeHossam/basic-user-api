@@ -12,7 +12,7 @@ Simple API to create and get users with access tokens
 
 ## Getting Started
 1. Navigate to desired location on your device
-1. open terminal/command line and run  `git clone https://github.com/JoeHossam/saqaya-task-user-api`
+1. open terminal/command line and run  `git clone https://github.com/JoeHossam/basic-user-api.git`
 
 ### Prerequisites
 1. Nodejs
